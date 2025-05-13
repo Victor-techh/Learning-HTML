@@ -1,26 +1,40 @@
-<html>
-	<head>
-		<titulo> BayBay </titulo>
-	</head>
-	<body>
-		<p> Atendimento </p>
+<form name="freteForm">
+  <div>
+    <label for="cep1">CEP (Parte 1 - 5 dígitos):</label>
+    <input type="text" id="cep1" name="cep1" maxlength="5">
+  </div>
+  <div>
+    <label for="cep2">CEP (Parte 2 - 3 dígitos):</label>
+    <input type="text" id="cep2" name="cep2" maxlength="3">
+  </div>
+  <div>
+    <label for="quantidade">Quantidade de Produtos (máx. 1 dígito):</label>
+    <input type="text" id="quantidade" name="quantidade" maxlength="1">
+  </div>
+  <button type="button" onclick="validarFrete()">Calcular Frete</button>
+  <div id="mensagem"></div>
+</form>
 
-		<a href="pedidos.html" class="botao"> Meus Pedidos </a>
-		<p> categorias </p>
-		<a href="categoria_1.html" class="botao"> Cinema e Fotografia </a>
-		<br />
-		<a href="categoria_2.html" class="botao"> Vídeo </a>
-		<br />
-		<a href="categora_3.html" class="botao"> Áudio </a>
-		<br />
-		<a href="categoria_4.html" class="botao"> Informática </a>
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+  }
 
-		<h1> Ofertas </h1>
-		<h2> Projetor Portátil R$ 150,00 </h2>
-		<h2> Câmera TecPix 42mp R$ 190,00 </h2>
-		<h2> Tv CCE 30p R$ 300,00 </h2>
-		<h2> Amplificador Brasint R$ 200,00 </h2>
-		<h2> Mobitor Intel R$ 250,00 </h2>
+  div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
 
-	</body>
-</html>
+  label {
+    width: 150px;
+    text-align: right;
+  }
+
+  input[type="text"] {
+    width: 50px;
+  }
+</style>
